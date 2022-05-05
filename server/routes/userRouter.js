@@ -1,8 +1,9 @@
 const Router = require("express");
-const userController = require("../controllers/userController");
 const router = new Router();
+const userController = require("../controllers/userController");
 
-router.post("/login", userController.login);
-router.get("/auth", userController.check);
+router.post("/", userController.create);
+router.get("/", userController.getAll);
+router.delete("/", userController.delete);
 
 module.exports = router;
