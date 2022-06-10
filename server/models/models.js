@@ -1,5 +1,5 @@
 const sequelize = require("../db");
-const { DataTypes } = require("sequelize");
+const { DataTypes } = require("sequelize"); //для описания типов полей string,integer ets
 
 const User = sequelize.define("user", {
   id: {

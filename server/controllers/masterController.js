@@ -1,5 +1,8 @@
+const { Master } = require("../models/models");
+const ApiError = require("../error/ApiError");
+
 class MasterController {
-  async create(req, res) {}
+  async create(req, res, next) {}
 
   async getOne(req, res) {}
 

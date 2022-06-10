@@ -2,7 +2,7 @@ require("dotenv").config();
 const express = require("express");
 const sequelize = require("./db");
 const models = require("./models/models");
-const cors = require("cors");
+const cors = require("cors"); // для отправки запросов из браузера
 const router = require("./routes/index");
 const errorHandler = require("./middleware/ErrorHandlingMiddleware");
 
@@ -14,7 +14,7 @@ app.use(cors());
 app.use(express.json());
 app.use("/api", router);
 
-//обработка ошибок, последний Middleware
+//обработка ошибок, последний!!! Middleware
 app.use(errorHandler);
 
 // проверка работы сервера
